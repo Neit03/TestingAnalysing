@@ -1,1 +1,19 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+.ruleses,
+.answer-text {
+  display: none;
+}
+.is-visible {
+  display: block;
+}
+.correct-value {
+  border: 2px solid green;
+  color: #fff;
+  background-color: green;
+}
+.uncorrect-value {
+  border: 2px solid red;
+  color: #fff;
+  background-color: red;
+}
