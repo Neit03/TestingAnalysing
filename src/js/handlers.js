@@ -16,7 +16,7 @@ export function onBtnCheckClick(event) {
     return;
   }
 
-  refs.ruleses.forEach(el => {
+  refs.rules.forEach(el => {
     el.classList.add('is-visible');
   });
 
