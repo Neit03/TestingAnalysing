@@ -45,6 +45,72 @@ export function checkAnswer() {
       'the vainer'
     );
   }
+  if (refs.selectQuestionFifth.value === 'The stronger, the better.') {
+    rightAnswer(refs.selectQuestionFifth);
+  } else if (refs.selectQuestionFifth.value !== 'The stronger, the better.') {
+    wrongAnswer(
+      refs.selectQuestionFifth,
+      refs.answerTextFifth,
+      refs.rightAnswerFifth,
+      'The stronger, the better'
+    );
+  }
+  if (refs.selectQuestionSixth.value === 'The more optimistic your boss is') {
+    rightAnswer(refs.selectQuestionSixth);
+  } else if (
+    refs.selectQuestionSixth.value !== 'The more optimistic your boss is'
+  ) {
+    wrongAnswer(
+      refs.selectQuestionSixth,
+      refs.answerTextSixth,
+      refs.rightAnswerSixth,
+      'The more optimistic your boss is'
+    );
+  }
+  if (refs.selectQuestionSeventh.value === 'The more calories') {
+    rightAnswer(refs.selectQuestionSeventh);
+  } else if (refs.selectQuestionSeventh.value !== 'The more calories') {
+    wrongAnswer(
+      refs.selectQuestionSeventh,
+      refs.answerTextSeventh,
+      refs.rightAnswerSeventh,
+      'The more calories'
+    );
+  }
+  if (refs.selectQuestionEighth.value === 'the fewer problems they will') {
+    rightAnswer(refs.selectQuestionEighth);
+  } else if (
+    refs.selectQuestionEighth.value !== 'the fewer problems they will'
+  ) {
+    wrongAnswer(
+      refs.selectQuestionEighth,
+      refs.answerTextEighth,
+      refs.rightAnswerEigth,
+      'the fewer problems they will'
+    );
+  }
+  if (refs.selectQuestionNinth.value === 'bigger') {
+    rightAnswer(refs.selectQuestionNinth);
+  } else if (refs.selectQuestionNinth.value !== 'bigger') {
+    wrongAnswer(
+      refs.selectQuestionNinth,
+      refs.answerTextNinth,
+      refs.rightAnswerNineth,
+      'bigger'
+    );
+  }
+  if (refs.selectQuestionTenth.value === 'The more relaxed your child is') {
+    rightAnswer(refs.selectQuestionTenth);
+  } else if (
+    refs.selectQuestionTenth.value !== 'The more relaxed your child is'
+  ) {
+    wrongAnswer(
+      refs.selectQuestionTenth,
+      refs.answerTextTenth,
+      refs.rightAnswerTenth,
+      'The more relaxed your child is '
+    );
+  }
   if (totalResult > 8) {
     Notiflix.Notify.success('Good job!');
   } else if (totalResult < 8 && totalResult > 5) {
