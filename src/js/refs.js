@@ -1,6 +1,8 @@
 export const refs = {
   testForm: document.querySelector('.test-form'),
   btnCheck: document.querySelector('.btn-check'),
+  btnTryAgain: document.querySelector('.btn-try-again'),
+  generalSelect: document.querySelectorAll('.general-select'),
   selectQuestionFirst: document.querySelector('#question-1'),
   selectQuestionSecond: document.querySelector('#question-2'),
   selectQuestionThird: document.querySelector('#question-3'),
@@ -12,6 +14,7 @@ export const refs = {
   selectQuestionNinth: document.querySelector('#question-9'),
   selectQuestionTenth: document.querySelector('#question-10'),
   rules: document.querySelectorAll('.rules'),
+  answerText: document.querySelectorAll('.answer-text'),
   answerTextFirst: document.querySelector('.answer-text-1'),
   answerTextSecond: document.querySelector('.answer-text-2'),
   answerTextThird: document.querySelector('.answer-text-3'),
@@ -32,5 +35,9 @@ export const refs = {
   rightAnswerEigth: document.querySelector('.right-answer-8'),
   rightAnswerNineth: document.querySelector('.right-answer-9'),
   rightAnswerTenth: document.querySelector('.right-answer-10'),
+  resultWrap: document.querySelector('.result-wrap'),
   resultValue: document.querySelector('.result-value'),
+  backdrop: document.querySelector('.backdrop'),
+  btnModalClose: document.querySelector('.modal-close'),
+  totalResult: document.querySelector('.total-result'),
 };

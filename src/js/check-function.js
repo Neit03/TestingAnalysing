@@ -1,7 +1,8 @@
 import { refs } from './refs';
 import Notiflix from 'notiflix';
+import { state } from './state';
 
-let totalResult = 0;
+// let totalResult = 0;
 
 export function checkAnswer() {
   if (refs.selectQuestionFirst.value === 'more') {
@@ -111,18 +112,19 @@ export function checkAnswer() {
       'The more relaxed your child is '
     );
   }
-  if (totalResult > 8) {
-    Notiflix.Notify.success('Good job!');
-  } else if (totalResult < 8 && totalResult > 5) {
-    Notiflix.Notify.info('Not bad! It is necessary to consolidate knowledge');
-  } else if (totalResult < 5) {
-    Notiflix.Notify.warning('Review the rules and try again!');
-  }
-  refs.resultValue.textContent = `${totalResult}/10`;
+  // if (totalResult > 8) {
+  //   Notiflix.Notify.success('Good job!');
+  // } else if (totalResult < 8 && totalResult > 5) {
+  //   Notiflix.Notify.info('Not bad! It is necessary to consolidate knowledge');
+  // } else if (totalResult < 5) {
+  //   Notiflix.Notify.warning('Review the rules and try again!');
+  // }
+  refs.resultWrap.classList.remove('visually-hidden');
+  refs.resultValue.textContent = `${state.totalResult}/10`;
 }
 
 function rightAnswer(el) {
-  totalResult += 1;
+  state.totalResult += 1;
   el.classList.add('correct-value');
 }
 
