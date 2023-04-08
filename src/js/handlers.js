@@ -2,6 +2,7 @@ import { checkAnswer } from './check-function';
 import { refs } from './refs';
 import { onModalOpen } from './modal';
 import Notiflix from 'notiflix';
+import { state } from './state';
 export function onBtnCheckClick(event) {
   event.preventDefault();
   if (event.target.nodeName !== 'BUTTON') {
@@ -34,6 +35,8 @@ export function onBtnCheckClick(event) {
 
   if (event.target.innerText === 'Try again') {
     event.currentTarget.reset();
+    refs.resultWrap.classList.add('visually-hidden');
+    state.totalResult = 0;
     refs.rules.forEach(el => {
       el.classList.remove('is-visible');
     });
@@ -43,15 +46,5 @@ export function onBtnCheckClick(event) {
     refs.answerText.forEach(el => {
       el.classList.add('visually-hidden');
     });
-    // refs.generalSelect.forEach(el => {
-    //   el.classList.remove('correct-value');
-    // });
   }
-}
-
-export function onBtnTryAgainClick(evt) {
-  // if (evt.target.innerText === 'Try again') {
-  //   console.log('reset');
-  //   refs.testForm.reset();
-  // }
 }

@@ -40,4 +40,5 @@ export const refs = {
   backdrop: document.querySelector('.backdrop'),
   btnModalClose: document.querySelector('.modal-close'),
   totalResult: document.querySelector('.total-result'),
+  resultText: document.querySelector('.result-text'),
 };

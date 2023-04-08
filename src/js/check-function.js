@@ -112,13 +112,7 @@ export function checkAnswer() {
       'The more relaxed your child is '
     );
   }
-  // if (totalResult > 8) {
-  //   Notiflix.Notify.success('Good job!');
-  // } else if (totalResult < 8 && totalResult > 5) {
-  //   Notiflix.Notify.info('Not bad! It is necessary to consolidate knowledge');
-  // } else if (totalResult < 5) {
-  //   Notiflix.Notify.warning('Review the rules and try again!');
-  // }
+
   refs.resultWrap.classList.remove('visually-hidden');
   refs.resultValue.textContent = `${state.totalResult}/10`;
 }

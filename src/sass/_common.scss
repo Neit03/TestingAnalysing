@@ -1,78 +1,78 @@
-@import '~node_modules/modern-normalize/modern-normalize.css';
+// @import '~node_modules/modern-normalize/modern-normalize.css';
 
-.rules,
-.answer-text-1,
-.answer-text-2,
-.answer-text-3,
-.answer-text-4,
-.answer-text-5,
-.answer-text-6,
-.answer-text-7,
-.answer-text-8,
-.answer-text-9,
-.answer-text-10 {
-  display: none;
-}
-.is-visible {
-  display: block;
-}
-.correct-value {
-  border: 2px solid green;
-  color: #fff;
-  background-color: green;
-}
-.uncorrect-value {
-  border: 2px solid red;
-  color: #fff;
-  background-color: red;
-}
-.start-value {
-  background-color: #fff;
-  color: black;
-  border: 1px solid black;
-}
+// .rules,
+// .answer-text-1,
+// .answer-text-2,
+// .answer-text-3,
+// .answer-text-4,
+// .answer-text-5,
+// .answer-text-6,
+// .answer-text-7,
+// .answer-text-8,
+// .answer-text-9,
+// .answer-text-10 {
+//   display: none;
+// }
+// .is-visible {
+//   display: block;
+// }
+// .correct-value {
+//   border: 2px solid green;
+//   color: #fff;
+//   background-color: green;
+// }
+// .uncorrect-value {
+//   border: 2px solid red;
+//   color: #fff;
+//   background-color: red;
+// }
+// .start-value {
+//   background-color: #fff;
+//   color: black;
+//   border: 1px solid black;
+// }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-body.show-modal .backdrop {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: initial;
-}
-body.show-modal .modal {
-  transform: scale(1);
-}
-.backdrop {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 50;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
-}
-.modal {
-  padding: 20px;
-  border-radius: 4px;
-  width: 500px;
-  background-color: #fff;
-  transform: scale(1.1);
-  transition: transform 200ms ease-in-out;
-}
+// .visually-hidden {
+//   position: absolute;
+//   width: 1px;
+//   height: 1px;
+//   margin: -1px;
+//   border: 0;
+//   padding: 0;
+//   white-space: nowrap;
+//   clip-path: inset(100%);
+//   clip: rect(0 0 0 0);
+//   overflow: hidden;
+// }
+// body.show-modal .backdrop {
+//   opacity: 1;
+//   visibility: visible;
+//   pointer-events: initial;
+// }
+// body.show-modal .modal {
+//   transform: scale(1);
+// }
+// .backdrop {
+//   position: fixed;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   pointer-events: none;
+//   background-color: rgba(0, 0, 0, 0.3);
+//   z-index: 50;
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
+// }
+// .modal {
+//   padding: 20px;
+//   border-radius: 4px;
+//   width: 500px;
+//   background-color: #fff;
+//   transform: scale(1.1);
+//   transition: transform 200ms ease-in-out;
+// }
