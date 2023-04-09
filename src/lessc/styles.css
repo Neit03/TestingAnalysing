@@ -204,6 +204,8 @@ body {
 .general-select {
   border: 1px solid #17202a;
   border-radius: 4px;
+  background-color: #fff;
+  color: #17202a;
   font-size: 4vw;
   line-height: 2;
 }
@@ -442,7 +444,7 @@ body.show-modal .modal {
   }
 }
 .modal-text-result {
-  font-size: 4vw;
+  font-size: 16px;
   line-height: 2;
   text-align: center;
   margin-bottom: 10px;
@@ -466,7 +468,7 @@ body.show-modal .modal {
   }
 }
 .result-text {
-  font-size: 4vw;
+  font-size: 16px;
   line-height: 2;
   text-align: center;
   font-weight: 700;

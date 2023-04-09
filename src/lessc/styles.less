@@ -191,6 +191,8 @@ body {
 .general-select {
   border: 1px solid @main-black;
   border-radius: 4px;
+  background-color: @second-text-color;
+  color: @main-black;
   .font();
   &:focus {
     outline: 1px solid @main-black;
@@ -361,7 +363,8 @@ body.show-modal .modal {
   }
 }
 .modal-text-result {
-  .font();
+  font-size: 16px;
+  line-height: 2;
   text-align: center;
   margin-bottom: 10px;
   @media @mobile {
@@ -378,7 +381,8 @@ body.show-modal .modal {
   }
 }
 .result-text {
-  .font();
+  font-size: 16px;
+  line-height: 2;
   text-align: center;
   font-weight: 700;
   margin-bottom: 30px;
