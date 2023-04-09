@@ -1,12 +1,9 @@
 import { refs } from './refs';
-import Notiflix from 'notiflix';
 import { state } from './state';
-
-// let totalResult = 0;
 
 export function checkAnswer() {
   if (refs.selectQuestionFirst.value === 'more') {
-    rightAnswer(refs.selectQuestionFirst);
+    rightAnswer(refs.selectQuestionFirst, refs.answerTextFirst);
   } else if (refs.selectQuestionFirst.value !== 'more') {
     wrongAnswer(
       refs.selectQuestionFirst,
@@ -17,7 +14,7 @@ export function checkAnswer() {
   }
 
   if (refs.selectQuestionSecond.value === 'The more active') {
-    rightAnswer(refs.selectQuestionSecond);
+    rightAnswer(refs.selectQuestionSecond, refs.answerTextSecond);
   } else if (refs.selectQuestionSecond.value !== 'The more active') {
     wrongAnswer(
       refs.selectQuestionSecond,
@@ -27,7 +24,7 @@ export function checkAnswer() {
     );
   }
   if (refs.selectQuestionThird.value === 'The more I concentrate') {
-    rightAnswer(refs.selectQuestionThird);
+    rightAnswer(refs.selectQuestionThird, refs.answerTextThird);
   } else if (refs.selectQuestionThird.value !== 'The more I concentrate') {
     wrongAnswer(
       refs.selectQuestionThird,
@@ -37,7 +34,7 @@ export function checkAnswer() {
     );
   }
   if (refs.selectQuestionFourth.value === 'the vainer') {
-    rightAnswer(refs.selectQuestionFourth);
+    rightAnswer(refs.selectQuestionFourth, refs.answerTextFourth);
   } else if (refs.selectQuestionFourth.value !== 'the vainer') {
     wrongAnswer(
       refs.selectQuestionFourth,
@@ -47,7 +44,7 @@ export function checkAnswer() {
     );
   }
   if (refs.selectQuestionFifth.value === 'The stronger, the better.') {
-    rightAnswer(refs.selectQuestionFifth);
+    rightAnswer(refs.selectQuestionFifth, refs.answerTextFifth);
   } else if (refs.selectQuestionFifth.value !== 'The stronger, the better.') {
     wrongAnswer(
       refs.selectQuestionFifth,
@@ -57,7 +54,7 @@ export function checkAnswer() {
     );
   }
   if (refs.selectQuestionSixth.value === 'The more optimistic your boss is') {
-    rightAnswer(refs.selectQuestionSixth);
+    rightAnswer(refs.selectQuestionSixth, refs.answerTextSixth);
   } else if (
     refs.selectQuestionSixth.value !== 'The more optimistic your boss is'
   ) {
@@ -69,7 +66,7 @@ export function checkAnswer() {
     );
   }
   if (refs.selectQuestionSeventh.value === 'The more calories') {
-    rightAnswer(refs.selectQuestionSeventh);
+    rightAnswer(refs.selectQuestionSeventh, refs.answerTextSeventh);
   } else if (refs.selectQuestionSeventh.value !== 'The more calories') {
     wrongAnswer(
       refs.selectQuestionSeventh,
@@ -79,7 +76,7 @@ export function checkAnswer() {
     );
   }
   if (refs.selectQuestionEighth.value === 'the fewer problems they will') {
-    rightAnswer(refs.selectQuestionEighth);
+    rightAnswer(refs.selectQuestionEighth, refs.answerTextEighth);
   } else if (
     refs.selectQuestionEighth.value !== 'the fewer problems they will'
   ) {
@@ -91,7 +88,7 @@ export function checkAnswer() {
     );
   }
   if (refs.selectQuestionNinth.value === 'bigger') {
-    rightAnswer(refs.selectQuestionNinth);
+    rightAnswer(refs.selectQuestionNinth, refs.answerTextNinth);
   } else if (refs.selectQuestionNinth.value !== 'bigger') {
     wrongAnswer(
       refs.selectQuestionNinth,
@@ -101,7 +98,7 @@ export function checkAnswer() {
     );
   }
   if (refs.selectQuestionTenth.value === 'The more relaxed your child is') {
-    rightAnswer(refs.selectQuestionTenth);
+    rightAnswer(refs.selectQuestionTenth, refs.answerTextTenth);
   } else if (
     refs.selectQuestionTenth.value !== 'The more relaxed your child is'
   ) {
@@ -113,11 +110,14 @@ export function checkAnswer() {
     );
   }
 
-  refs.resultWrap.classList.remove('visually-hidden');
+  refs.resultWrap.classList.remove('is-hidden');
   refs.resultValue.textContent = `${state.totalResult}/10`;
 }
 
-function rightAnswer(el) {
+function rightAnswer(el, text) {
+  if (text.classList.contains('is-visible')) {
+    text.classList.remove('is-visible');
+  }
   state.totalResult += 1;
   el.classList.add('correct-value');
 }
@@ -126,4 +126,22 @@ function wrongAnswer(el, text, answer, value) {
   el.classList.add('uncorrect-value');
   text.classList.add('is-visible');
   answer.textContent = value;
+}
+
+export function checkElContainsClass(element, className) {
+  element.forEach(el => {
+    if (el.classList.contains(className)) {
+    }
+    el.classList.remove(className);
+  });
+}
+export function elementsRemoveClass(element, className) {
+  element.forEach(el => {
+    el.classList.remove(className);
+  });
+}
+export function elementsAddClass(element, className) {
+  element.forEach(el => {
+    el.classList.add(className);
+  });
 }

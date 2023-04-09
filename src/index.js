@@ -1,4 +1,4 @@
-import { onBtnCheckClick, onBtnTryAgainClick } from './js/handlers';
+import { onBtnCheckClick } from './js/handlers';
 import { onBackdropModalClick, onCloseModal } from './js/modal';
 import { refs } from './js/refs';
 
