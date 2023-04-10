@@ -41,13 +41,14 @@ export function onBtnCheckClick(event) {
 
     checkAnswer();
     onModalOpen();
-
+    refs.btnCheck.disabled = true;
     checkElContainsClass(refs.answerText, 'is-hidden');
     checkElContainsClass(refs.generalSelect, 'start-value');
   }
 
   if (event.target.innerText === 'Try again') {
     event.currentTarget.reset();
+    refs.btnCheck.disabled = false;
     refs.resultWrap.classList.add('is-hidden');
     state.totalResult = 0;
 
