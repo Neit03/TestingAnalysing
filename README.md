@@ -56,7 +56,7 @@ features [refer to documentation](https://parceljs.org/).
    [http://localhost:1234](http://localhost:1234). This page will automatically
    reload after saving changes to the project files.
 
-## Файлы и папки
+## Files and folders
 
 - All parsals of style files should be located in the `src/sass` folder and
   imported into page style files. For example, for `index.html` the style file
